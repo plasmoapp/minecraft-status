@@ -1,14 +1,12 @@
 import Head from 'next/head'
-import Server from '../components/home/server'
-import Navigation from '../components/navigation'
-import getJSON from '../lib/utils/getJSON'
+import Server from '../components/Server/server'
+import Navigation from '../components/Navigation/navigation'
 import fs from 'fs'
 import styles from './index.module.scss'
-import mysql from "../backend/mysql"
-
+import mysql from "../server/mysql"
 
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
-import { deepStrictEqual } from 'assert'
+
 config.autoAddCss = false;
 
 
@@ -22,8 +20,6 @@ function Page({ data }) {
 		</Head>
 
 		<Navigation></Navigation>
-
-		{/* <h5>Топ приватных серверов по онлайну</h5> */}
 
 		<div>
 			{data.map((item, index) => <Server key={index} data={data[index]}/>)}

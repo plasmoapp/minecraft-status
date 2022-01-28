@@ -53,5 +53,5 @@
   "include": [
       "**/*.ts",
       "**/*.tsx"
-, "src/backend/mysql.js", "src/backend/index.js"  ]
+, "src/server/mysql.js", "src/backend/initializeTables.js"  ]
 }

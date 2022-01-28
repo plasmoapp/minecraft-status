@@ -4,8 +4,8 @@ import next from "next"
 import express from "express"
 import schedule from "node-schedule"
 
-import pingServers from "../backend/pingServers"
-import initializeTables from "../backend/index"
+import pingServers from "./pingServers"
+import initializeTables from "./initializeTables"
 
 const dev = process.env.NODE_ENV !== "production"
 

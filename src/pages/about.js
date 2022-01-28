@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from './index.module.scss'
 import Head from 'next/head'
-import Navigation from '../components/navigation'
+import Navigation from '../components/Navigation/navigation'
 
 export default function FirstPost() {
     return (
