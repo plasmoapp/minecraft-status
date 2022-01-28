@@ -6,6 +6,8 @@
 
 <p className="text_16">Можно посмотреть <a href="https://github.com/plasmoapp/minecraft-status" target="_blank">исходный код</a> сайта. Код говно, постарайтесь не утонуть.</p>
 
+<p className="text_16">Можете отредактировать servers.json и использовать этот сайт для мониторинга ваших серверов. Только не забудьте указать ссылку на оригинальный проект и авторство. Лицензия GPL 3.0.</p>
+
 <p className="text_16">Если хотите добавить/убрать ваш сервер, то <a href="https://t.me/kpids" target="_blank">пишите мне в Telegram.</a></p>
 
 ## Как запустить
