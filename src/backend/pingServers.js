@@ -32,9 +32,9 @@ async function getGraph(item, graphLength, graphStep) {
 
     let data = []
 
-    for (let i = graphStep; i <= graphLength; i += graphStep) {
+    for (let i = 0; i <= graphLength - graphStep; i += graphStep) {
         const dataFiltered = dataFormatted.filter(
-            (ite) => ite[0] <= i && ite[0] >= i - graphStep
+            (ite) => ite[0] <= i + graphStep/2 && ite[0] >= i - graphStep/2
         )
 
         if (dataFiltered[0]) {

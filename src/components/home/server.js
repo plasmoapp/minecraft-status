@@ -139,7 +139,14 @@ function Server({ data }) {
       <div className={styles.chart}>
         <HighchartsReact
           highcharts={Highcharts}
-          options={serverChart(data.graph)}
+          options={serverChart(
+            data.graph.map(item => {
+              return [
+                item[0]*10*60*1000,
+                item[1]
+              ]  
+            })            
+          )}
         />
       </div>
     </div>
