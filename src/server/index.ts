@@ -29,8 +29,6 @@ const port = process.env.PORT || 3215;
 
         await initializeTables()
 
-        // pingServers()
-
         if (!dev) {
             try {
                 schedule.scheduleJob('*/10 * * * *', function(){
