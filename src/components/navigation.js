@@ -7,9 +7,9 @@ export default function Navigation() {
     return (
         <div className = {styles.navigation}>
             
-            <div>
-                <Image src="/peepoG.png" width="48" height="39"/>
-            </div>
+            <Link href='/'>
+                <a><img src="/peepoG.png" width="48" height="39"></img></a>
+            </Link>
 
             <Link href='/'>
                 <a>Сервера</a>
