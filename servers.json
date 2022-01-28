@@ -1,0 +1,145 @@
+[
+    {
+      "id": 0,
+      "name": "Plasmo SMP",
+      "ip": "sur.plo.su",
+      "discord": "CAQTkYt",
+      "vk": "plasmomc",
+      "site": "smp.plo.su"
+      
+    },
+    {
+      "id": 1,
+      "name": "Plasmo RP",
+      "ip": "prp.plo.su",
+      "vk": "plasmorp",
+      "discord": "VJtCjwh",
+      "site": "rp.plo.su"
+    },
+    {
+      "id": 2,
+      "name": "SubShield",
+      "ip": "sub.shield.land",
+      "discord": "fJ46CSW",
+      "vk": "themineshield",
+      "site": "shield.land"
+    },
+    {
+      "id": 3,
+      "name": "Pepeland",
+      "ip": "play.pepeland.net",
+      "discord": "FRupXnA",
+      "vk": "glebgudini",
+      "site": "pepeland.net"
+    },
+    {
+      "id": 4,
+      "name": "SPk",
+      "ip": "spk.spworlds.ru",
+      "vk": "spk_3"
+    },
+    {
+      "id": 5,
+      "name": "Camel",
+      "ip": "mc.camel.su",
+      "discord": "xrsQ27pcDm",
+      "vk": "camelserver",
+      "site": "camel.su"
+    },
+    {
+      "id": 6,
+      "name": "Makoto",
+      "ip": "vanilla.makotomc.ru",
+      "discord": "tzT4G2P",
+      "vk": "makotomc",
+      "site": "makotomc.ru"
+    },
+    {
+      "id": 7,
+      "name": "RevolutionWorlds",
+      "ip": "mc.reworlds.su",
+      "discord": "vuFwdJ8",
+      "vk": "mc_reworlds",
+      "site": "reworlds.su"
+    },
+    {
+      "id": 8,
+      "name": "JellyCraft",
+      "ip": "play.jellycraft.su",
+      "vk": "jellycraft_mc",
+      "discord": "F7S2JCSxuF",
+      "site": "jellycraft.su" 
+    },
+    {
+      "id": 9,
+      "name": "DMC",
+      "ip": "dmc.joinserver.ru",
+      "discord": "eqDwnJc3Cq",
+      "vk": "dmc.server",
+      "site": "dmc-minecraft.ru",
+      "tiktok": "dmc.minecraft"
+    },
+    {
+      "id": 10,
+      "name": "HypeCloud",
+      "ip": "hypecloud.ru",
+      "vk": "hype_cloud"
+    },
+    {
+      "id": 11,
+      "name": "SparkCraft Vanilla",
+      "ip": "vanilla.sparkcraft.ru",
+      "vk": "sparkcraft_vanilla",
+      "discord": "VSQ2WKN",
+      "site": "vanilla.sparkcraft.ru" 
+    },
+    {
+      "id": 12,
+      "name": "SparkCraft Survival",
+      "ip": "survival.sparkcraft.ru",
+      "vk": "sparkcraft",
+      "discord": "cUXUaTq",
+      "site": "survival.sparkcraft.ru" 
+    },
+    {
+      "id": 13,
+      "name": "FaithCraft",
+      "ip": "mc.faithcraft.ru",
+      "vk": "faithcraft",
+      "discord": "WVY7n42m6u",
+      "site": "faithcraft.ru"
+    },
+    {
+      "id": 14,
+    	"name": "SubLand",
+    	"ip": "play.subland.fun",
+      "vk": "subland",
+      "discord": "NphbYdb"
+    },
+    {
+      "id": 15,
+    	"name": "JUSTGROUND",
+    	"ip": "play.justground.ru",
+      "vk": "justgroundmc"
+    },
+    {
+      "id": 16,
+      "name": "FarLandRP",
+      "ip": "farlandrp.ru",
+      "vk": "farlandrp",
+      "discord": "jecdZxtSpv",
+      "tiktok": "farlandrp.tiktok"
+    },
+    {
+      "id": 17,
+      "name": "Globary",
+      "ip": "mc.globary.ru",
+      "vk": "globary",
+      "discord": "NDASyv4ZqS"
+    },
+    {
+      "id": 18,
+      "name": "Pepega",
+      "ip": "pepega.com"
+    }
+]

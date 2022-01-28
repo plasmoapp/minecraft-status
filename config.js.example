@@ -1,0 +1,9 @@
+export default {
+    "mysql": {
+        "host": "",
+        "port": "",
+        "user": "",
+        "password": "",
+        "db": ""
+    }
+}

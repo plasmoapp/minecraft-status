@@ -1,0 +1,212 @@
+:root {
+  --BG_0: #ffffff;
+  --BG_1: #ebedf0;
+  --BG_2: #d7d9db;
+  --BG_8: #2d2d2e;
+  --BG_9: #1e1e1f;
+
+  --FG_0: #ffffff;
+
+  --FG_3: #c1c2c4;
+
+  --FG_5: #79797a;
+  --FG_6: #5f6061;
+  --FG_7: #464747;
+  --FG_9: #1e1e1f;
+
+  --TC_5: #186ef0;
+  --TC_6: #1562d6;
+  --TC_7: #1357bd;
+
+  --RED: #eb3f2f;
+  --YEL: #f2c037;
+  --GRN: #2bd948;
+}
+
+// Inter
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--FG_9);
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+body {
+  background-color: var(--BG_0);
+}
+
+/* Headlines */
+h1 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 66px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 56px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 34px;
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* Paragraphs */
+/* 13px */
+.text_13 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+}
+
+.text_13_medium {
+  @extend .text_13;
+  font-weight: 500;
+}
+
+/* 14px */
+.text_14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.1px;
+}
+
+.text_14_medium {
+  @extend .text_14;
+  font-weight: 500;
+}
+
+/* 16px */
+.text_16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+}
+
+.text_16_medium {
+  @extend .text_16;
+  font-weight: 500;
+}
+
+.text_16_sbold {
+  @extend .text_16;
+  font-weight: 600;
+}
+
+/* 18px */
+.text_18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+}
+
+.text_18_medium {
+  @extend .text_16;
+  font-weight: 500;
+}
+
+.text_18_sbold {
+  @extend .text_18;
+  font-weight: 600;
+}
+
+/* Buttons */
+.button_14 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
+.button_16 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+}
+
+.button_18 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+}
+
+.highcharts-area {
+  fill: var(--YEL);
+  opacity: 0.57;
+}
+
+.chart__point_header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 156.61%;
+  letter-spacing: 0.01em;
+  fill: var(--FG_0);
+  margin-top: 5px;
+  margin-left: 6px;
+}
+
+.chart__point_value {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 156.61%;
+  letter-spacing: 0.01em;
+  margin-top: 5px;
+  margin-left: 6px;
+  fill: var(--GRN);
+}
+
+.highcharts-container {
+  border-radius: 10px;
+}

@@ -1,0 +1,30 @@
+.wrapper {
+    display: block;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 32px;
+    
+    .about {
+      h5 {
+        margin-bottom: 22px;  
+      }
+      p {
+        margin-bottom: 16px;
+      }
+      a {
+        color: var(--TC_5);
+        cursor: pointer;
+        font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+          color: var(--TC_6);
+        }
+        &:active {
+          color: var(--TC_7);
+        }
+    }
+    }
+
+}

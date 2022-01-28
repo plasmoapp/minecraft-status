@@ -1,0 +1,23 @@
+.navigation {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+
+    :not(:last-child) {
+        margin-right: 22px;
+    }
+
+    a {
+        color: var(--TC_5);
+        cursor: pointer;
+        font-weight: 500;
+        user-select: none;
+        &:hover {
+          text-decoration: underline;
+          color: var(--TC_6);
+        }
+        &:active {
+          color: var(--TC_7);
+        }
+    }
+}
