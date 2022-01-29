@@ -14,7 +14,7 @@ export default function Page(props) {
 	const [data, setData] = useState(props.data)
 
 	const socket = useSocket('update', (serversData) => {
-		console.log(`Updating...`)
+		console.log(`Updating data...`)
 		setData(serversData)
 	})	
 
@@ -35,27 +35,6 @@ export default function Page(props) {
 		</wrapper>
   )
 }
-
-// export default class Page extends Component {
-// 	render() {
-// 		return (
-// 				<wrapper className = {styles.wrapper}>
-// 				<Head>
-// 					<title>Мониторинг приватных серверов</title>
-// 					<link rel="icon" href="/favicon.ico" />
-// 					<style>{dom.css()}</style>
-// 				</Head>
-			
-// 				<Navigation></Navigation>
-			
-// 				<div>
-// 					{this.data.map((item, index) => <Server key={index} data={this.data[index]}/>)}
-// 				</div>
-			
-// 			</wrapper>
-// 		)
-// 	}
-// }
 
 export async function getServerSideProps(ctx) {
  	return { props: { data: await ctx.req.serversData } }
