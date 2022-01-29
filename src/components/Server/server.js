@@ -49,7 +49,7 @@ export default function Server({ data }) {
                 item[0]*10*60*1000,
                 item[1]
               ]  
-            })            
+            }).reverse()         
           )}
         />
       </div>
