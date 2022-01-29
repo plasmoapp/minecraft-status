@@ -1,6 +1,8 @@
 import { faVk, faDiscord, faTiktok } from '@fortawesome/free-brands-svg-icons'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 
+// TODO move into the config file
+
 export default [
     {
       name: "site",

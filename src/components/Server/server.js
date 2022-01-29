@@ -33,7 +33,7 @@ export default function Server({ data }) {
       <div className={styles.icons}>
         {socials.map(item => {
           const url = `https://${item.url}${data[item.name]}`
-          return data[item.name] && <a title={url} href={url} target="_blank"><FontAwesomeIcon icon={item.icon}/></a>
+          return data[item.name] && <a title={url} href={url} target="_blank" key={item.name}><FontAwesomeIcon icon={item.icon}/></a>
         })}
       </div>
 
@@ -43,6 +43,9 @@ export default function Server({ data }) {
           options={serverChart(
             data.graph.map(item => {
               return [
+
+                // TODO Use graphStep from the config
+
                 item[0]*10*60*1000,
                 item[1]
               ]  
@@ -50,7 +53,7 @@ export default function Server({ data }) {
           )}
         />
       </div>
-      
+
     </div>
   );
 }

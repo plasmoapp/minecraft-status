@@ -1,59 +1,62 @@
 import Head from 'next/head'
 import Server from '../components/Server/server'
 import Navigation from '../components/Navigation/navigation'
-import fs from 'fs'
 import styles from './index.module.scss'
-import mysql from "../server/mysql"
+import useSocket from '../lib/useSocket'
 
 import { config, dom } from "@fortawesome/fontawesome-svg-core";
+import { useState } from 'react'
 
 config.autoAddCss = false;
 
+export default function Page(props) {
 
-function Page({ data }) {
-  return (
-	<wrapper className = {styles.wrapper}>
-		<Head>
-			<title>Мониторинг приватных серверов</title>
-			<link rel="icon" href="/favicon.ico" />
-			<style>{dom.css()}</style>
-		</Head>
+	const [data, setData] = useState(props.data)
 
-		<Navigation></Navigation>
+	const socket = useSocket('update', (serversData) => {
+		console.log(`Updating...`)
+		setData(serversData)
+	})	
 
-		<div>
-			{data.map((item, index) => <Server key={index} data={data[index]}/>)}
-		</div>
+  	return (
+		<wrapper className = {styles.wrapper}>
+			<Head>
+				<title>Мониторинг приватных серверов</title>
+				<link rel="icon" href="/favicon.ico" />
+				<style>{dom.css()}</style>
+			</Head>
 
-	</wrapper>
+			<Navigation></Navigation>
+
+			<div>
+				{data.map((item, index) => <Server key={index} data={item}/>)}
+			</div>
+
+		</wrapper>
   )
 }
 
-export async function getServerSideProps() {
+// export default class Page extends Component {
+// 	render() {
+// 		return (
+// 				<wrapper className = {styles.wrapper}>
+// 				<Head>
+// 					<title>Мониторинг приватных серверов</title>
+// 					<link rel="icon" href="/favicon.ico" />
+// 					<style>{dom.css()}</style>
+// 				</Head>
+			
+// 				<Navigation></Navigation>
+			
+// 				<div>
+// 					{this.data.map((item, index) => <Server key={index} data={this.data[index]}/>)}
+// 				</div>
+			
+// 			</wrapper>
+// 		)
+// 	}
+// }
 
-	const servers = JSON.parse(fs.readFileSync('servers.json'))
-	const data = []
-
-	const dataRaw = await mysql.query(`SELECT * FROM servers`);
-
-  	await Promise.all(servers.map(async item => {
-
-		const dataFiltered = dataRaw.filter(
-			ite => ite.id == item.id
-		)[0]
-
-		if (dataFiltered && fs.existsSync(`public/server-icons/${item.id}.png`)) {
-			dataFiltered.graph = JSON.parse(dataFiltered.graph)
-			data.push({
-				...dataFiltered,
-				...item
-			})
-		}
-  	}))
-
-  	data.sort((a,b) => b.players - a.players)
-
-  	return { props: { data } }
+export async function getServerSideProps(ctx) {
+ 	return { props: { data: await ctx.req.serversData } }
 }
-
-export default Page

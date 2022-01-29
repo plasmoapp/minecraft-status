@@ -1,3 +1,5 @@
+// TODO Fix year instead of time
+
 export default function serverChart(graph) {
     return {
         credits: undefined,
