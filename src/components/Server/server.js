@@ -9,6 +9,7 @@ import HighchartsReact from 'highcharts-react-official'
 
 import socials from "./socials"
 import serverChart from "./serverChart"
+import config from "../../../config"
 
 export default function Server({ data }) {
 
@@ -43,10 +44,7 @@ export default function Server({ data }) {
           options={serverChart(
             data.graph.map(item => {
               return [
-
-                // TODO Use graphStep from the config
-
-                item[0]*10*60*1000,
+                item[0]*config.graph.step*60*1000,
                 item[1]
               ]  
             }).reverse()         

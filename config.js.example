@@ -1,9 +1,13 @@
 export default {
-    "mysql": {
-        "host": "",
-        "port": "",
-        "user": "",
-        "password": "",
-        "db": ""
+    mysql: {
+        host: "",
+        port: "",
+        user: "",
+        password: "",
+        db: ""
+    },
+    graph: {
+        length: 24*6*10, // in minutes
+        step: 10 // in minutes
     }
 }

@@ -1,13 +1,11 @@
-import { getStatus } from "mc-server-status"
-
 import fs from "fs"
 
+import { getStatus } from "mc-server-status"
 import { Base64 } from "js-base64"
 
 import mysql from "./mysql"
 import getGraph from "./getGraph"
-import { deepStrictEqual } from "assert"
-import { type } from "os"
+import config from "../../config"
 
 export default async function pingServers(dev) {
     const servers = JSON.parse(fs.readFileSync("servers.json"));
@@ -41,13 +39,8 @@ export default async function pingServers(dev) {
                  `)
 
                 // Update current server status
-
-                // TODO move graphLength and graphStep into the config file
-
-                const graphLength = 24 * 60 * 60 * 1000 // in ms
-                const graphStep = 10 * 60 * 1000
-
-                const graph = JSON.stringify(await getGraph(item, graphLength, graphStep))
+                
+                const graph = JSON.stringify(await getGraph(item, config.graph.length*60*1000, config.graph.step*60*1000))
 
                 mysql.query(`
                     INSERT INTO servers

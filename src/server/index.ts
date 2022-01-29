@@ -9,6 +9,7 @@ import schedule from "node-schedule"
 import pingServers from "./pingServers"
 import getServers from "./getServers"
 import initializeTables from "./initializeTables"
+import config from "../../config"
 
 const dev = process.env.NODE_ENV !== "production"
 const nextApp = next({ dev })
@@ -43,7 +44,7 @@ nextApp.prepare().then(async () => {
 
         if (!dev) {
             try {
-                schedule.scheduleJob('*/10 * * * *', async function(){
+                schedule.scheduleJob(`*/${config.graph.step} * * * *`, async function(){
                     console.log(`Pinging servers...`)
     
                     await pingServers(dev)
