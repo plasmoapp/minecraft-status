@@ -1,13 +1,14 @@
 import "./setupConfig"
 
-import * as http from 'http'
 import next, { NextApiHandler } from "next"
 import express from "express"
+import * as http from 'http'
 import * as socketio from 'socket.io'
+import schedule from "node-schedule"
 
+import pingServers from "./pingServers"
 import getServers from "./getServers"
 import initializeTables from "./initializeTables"
-import runScheduler from "./runScheduler"
 
 const dev = process.env.NODE_ENV !== "production"
 const nextApp = next({ dev })
@@ -40,7 +41,23 @@ nextApp.prepare().then(async () => {
 
         await initializeTables()
 
-        runScheduler(dev, io)
+        if (!dev) {
+            try {
+                schedule.scheduleJob('*/10 * * * *', async function(){
+                    console.log(`Pinging servers...`)
+    
+                    await pingServers(dev)
+                    serversData = await getServers()
+                    
+                    io.sockets.emit('update', serversData)
+                })
+                console.log('> Scheduler initialized')
+            } catch (e) {
+                console.log(`> Scheduler is not initialized: ${e}`)
+            }
+        } else {
+            console.log('> Scheduler is not initialized: dev server')
+        }
 
     } catch (e) {
         console.error(e)

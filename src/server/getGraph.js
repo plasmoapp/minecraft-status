@@ -1,5 +1,9 @@
 import mysql from './mysql'
 
+function div(val, by){
+    return (val - val % by) / by
+}
+
 export default async function getGraph(item, graphLength, graphStep) {
 
     const now = Date.now()

@@ -9,10 +9,6 @@ import getGraph from "./getGraph"
 import { deepStrictEqual } from "assert"
 import { type } from "os"
 
-function div(val, by){
-    return (val - val % by) / by
-}
-
 export default async function pingServers(dev) {
     const servers = JSON.parse(fs.readFileSync("servers.json"));
 
