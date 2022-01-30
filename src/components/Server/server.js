@@ -13,45 +13,45 @@ import config from "../../../config"
 
 export default function Server({ data }) {
 
-  return data.online && (
+    return data.online && (
 
-    <div className={styles.server}>
-      <div className={styles.info}>
+        <div className={styles.server}>
+            <div className={styles.info}>
 
-        <Image src={`/server-icons/${data.id}.png`} width="64" height="64" />
+                <Image src={`/server-icons/${data.id}.png`} width="64" height="64" />
 
-        <div className={styles.text}>
-          <p className={`text_16_sbold ${styles.name}`}>{data.name}</p>
-          <p className={`text_14_medium ${styles.ip}`}>{data.ip}</p>
+                <div className={styles.text}>
+                    <p className={`text_16_sbold ${styles.name}`}>{data.name}</p>
+                    <p className={`text_14_medium ${styles.ip}`}>{data.ip}</p>
+                </div>
+
+                <div className={styles.online}>
+                    <p className='text_14_medium'>{data.players}/{data.max}</p>
+                </div>
+
+            </div>
+
+            <div className={styles.icons}>
+                {socials.map(item => {
+                    const url = `https://${item.url}${data[item.name]}`
+                    return data[item.name] && <a title={url} href={url} target="_blank" key={item.name}><FontAwesomeIcon icon={item.icon}/></a>
+                })}
+            </div>
+
+            <div className={styles.chart}>
+                <HighchartsReact
+                    highcharts={Highcharts}
+                    options={serverChart(
+                        data.graph.map(item => {
+                            return [
+                                item[0]*config.graph.step*60*1000,
+                                item[1]
+                            ]
+                        }).reverse()
+                    )}
+                />
+            </div>
+
         </div>
-
-        <div className={styles.online}>
-          <p className='text_14_medium'>{data.players}/{data.max}</p>
-        </div>
-
-      </div>
-
-      <div className={styles.chart}>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={serverChart(
-            data.graph.map(item => {
-              return [
-                item[0]*config.graph.step*60*1000,
-                item[1]
-              ]  
-            }).reverse()         
-          )}
-        />
-      </div>
-
-      <div className={styles.icons}>
-        {socials.map(item => {
-          const url = `https://${item.url}${data[item.name]}`
-          return data[item.name] && <a title={url} href={url} target="_blank" key={item.name}><FontAwesomeIcon icon={item.icon}/></a>
-        })}
-      </div>
-
-    </div>
-  );
+    );
 }
