@@ -31,13 +31,6 @@ export default function Server({ data }) {
 
       </div>
 
-      <div className={styles.icons}>
-        {socials.map(item => {
-          const url = `https://${item.url}${data[item.name]}`
-          return data[item.name] && <a title={url} href={url} target="_blank" key={item.name}><FontAwesomeIcon icon={item.icon}/></a>
-        })}
-      </div>
-
       <div className={styles.chart}>
         <HighchartsReact
           highcharts={Highcharts}
@@ -50,6 +43,13 @@ export default function Server({ data }) {
             }).reverse()         
           )}
         />
+      </div>
+
+      <div className={styles.icons}>
+        {socials.map(item => {
+          const url = `https://${item.url}${data[item.name]}`
+          return data[item.name] && <a title={url} href={url} target="_blank" key={item.name}><FontAwesomeIcon icon={item.icon}/></a>
+        })}
       </div>
 
     </div>

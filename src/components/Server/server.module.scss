@@ -1,4 +1,7 @@
 .server {
+
+    position: relative;
+
     .info {
         display: flex;
         padding: 22px;
@@ -39,7 +42,11 @@
 
     .icons {
         padding: 0px 22px;
+        width: 100%;
         display: flex;
+        justify-content: left;
+        position: absolute;
+        bottom: 22px;
         font-size: 18px;
         a {
             display: flex;
