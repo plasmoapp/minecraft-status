@@ -111,7 +111,7 @@
     },
     {
       "id": 14,
-    	"name": "SubLand",
+        "name": "SubLand",
     	"ip": "play.subland.fun",
       "vk": "subland",
       "discord": "NphbYdb"
@@ -148,5 +148,20 @@
       "ip": "aquaticplus.tk",
       "vk": "aquaticplus",
       "discord": "svG62gXAuj"
+    },
+    {
+      "id": 20,
+      "name": "VanillaRP",
+      "ip": "mc.vanillarp.ru",
+      "discord": "C3c383vFfH",
+      "site": "vanillarp.ru"
+    },
+    {
+      "id": 21,
+      "name": "UniverseMC",
+      "ip": "play.universemc.ru",
+      "vk": "universemc",
+      "discord": "YtAecnE6BG",
+      "site": "universemc.ru"
     }
 ]
