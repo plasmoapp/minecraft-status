@@ -163,5 +163,33 @@
       "vk": "universemc",
       "discord": "YtAecnE6BG",
       "site": "universemc.ru"
+    },
+    {
+      "id": 22,
+      "name": "Haku",
+      "ip": "haku.su",
+      "vk": "hakumc",
+      "discord": "xVmnhENfUx"
+    },
+    {
+      "id": 23,
+      "name": "CIV Vanilla",
+      "ip": "mc.civvanilla.ru",
+      "vk": "minecraftciv",
+      "discord": "cBFSceb"
+    },
+    {
+      "id": 24,
+      "name": "Эденор",
+      "ip": "mc.edenor.ru",
+      "vk": "edenorrp",
+      "discord": "bC66Pwh"
+    },
+    {
+      "id": 25,
+      "name": "DarkFoxSubs",
+      "ip": "dfsubs.ru",
+      "discord": "JF5TTEztw6"
     }
 ]
+
