@@ -12,8 +12,7 @@ import serverChart from "./serverChart"
 import config from "../../../config"
 
 export default function Server({ data }) {
-
-    return data.online && (
+    return (
 
         <div className={styles.server}>
             <div className={styles.info}>

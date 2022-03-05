@@ -16,7 +16,7 @@ export default function Page(props) {
 	const socket = useSocket('update', (serversData) => {
 		console.log(`Updating data...`)
 		setData(serversData)
-	})	
+	})
 
   	return (
 		<wrapper className = {styles.wrapper}>
